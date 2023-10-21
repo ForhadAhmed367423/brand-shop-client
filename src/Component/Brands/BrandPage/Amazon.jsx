@@ -8,7 +8,7 @@ const Amazon = () => {
 
   useEffect(() => {
     // Fetch All Products
-    fetch("https://brand-shop-server-nkk757sco-forhadahmed367423s-projects.vercel.app/product", {
+    fetch("https://brand-shop-server-sable-gamma.vercel.app/product", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

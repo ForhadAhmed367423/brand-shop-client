@@ -11,7 +11,6 @@ import Home from './Component/Home/Home';
 import AddProducts from './Component/AddProduct/AddProducts';
 import Login from './Component/Firebase/Login/Login';
 import Register from './Component/Firebase/Register/Register';
-import { UserContextProvider } from './context/UserContext';
 
 import Amazon from './Component/Brands/BrandPage/Amazon';
 import Apple from './Component/Brands/BrandPage/Apple';
@@ -20,8 +19,10 @@ import Dell from './Component/Brands/BrandPage/Dell';
 import Microsoft from './Component/Brands/BrandPage/Microsoft';
 import Samsung from './Component/Brands/BrandPage/Samsung';
 import MyCart from './Component/MyCart/MyCart';
-import UpdateBrand from './Component/UpdateBrand/UpdateBrand';
 import Error from './Component/Error';
+import SIngleProductDetails from './Component/Products/SIngleProductDetails';
+import UpdateForm from './Component/UpdateForm/UpdateForm';
+import { UserContextProvider } from './Context/UserContext';
 
 
 const router = createBrowserRouter([
@@ -74,12 +75,15 @@ const router = createBrowserRouter([
         path:"/myCart",
         element: <MyCart></MyCart>
       },
-
       {
-        path:"/updateBrand/:brand",
-        element:<UpdateBrand></UpdateBrand>,
-        loader:({params})=>fetch(`https://brand-shop-server-nkk757sco-forhadahmed367423s-projects.vercel.app/product/${params.brand}`)
-      }
+        path: "/singleProductDetails/:id",
+        element: <SIngleProductDetails />,
+      },
+      {
+        path: "/updateForm/:id",
+        element: <UpdateForm />,
+      },
+
     ]
       
     
