@@ -24,6 +24,7 @@ const Register = () => {
       .then(result => {
           console.log(result.user);
           setSuccess('User created successfully')
+          navigate('/');
       })
       .catch(error => {
           console.error(error);
@@ -102,7 +103,6 @@ const Register = () => {
             </div>
             }
             
-           
           </div>
         </div>
       </div>
