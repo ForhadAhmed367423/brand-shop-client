@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 const UpdateBrand = () => {
     const handleUpdateProduct = event => {
 
-        const product = useLoaderData();
+        const product =useLoaderData({params});
         const {brand}= product;
 
         event.preventDefault();
@@ -20,7 +20,7 @@ const UpdateBrand = () => {
         const newProduct ={image, name, brands, price, description, type};
         console.log(newProduct);
 
-        fetch(`http://localhost:5000/product/${brand}`, {
+        fetch(`https://brand-shop-server-nkk757sco-forhadahmed367423s-projects.vercel.app/product/${brand}`, {
             method: 'PUT',
             headers: {
                 'content-type':'application/json'
@@ -103,10 +103,10 @@ const UpdateBrand = () => {
                         <h6 className='text-[#1B3C35] text-[20px] font-normal mb-2'>Short Description</h6>
                         <input className='rounded-[10px] lg:w-[850px] pt-[16px] pb-[100px] px-[16px] border-2 bg-[transparent] border-[#000000] text-[#1B3C35] outline-none' type="text" placeholder='Short Description' name='description'/>
                     </div>
-                    <div>
-                        <button className='px-8 py-4 bg-[#000000] text-white font-semibold text-[18px]'>Add Product</button>
-                    </div>
                 </form>
+                    <div>
+                        <button onClick={handleUpdateProduct} className='px-8 py-4 bg-[#000000] text-white font-semibold text-[18px]'>Update product</button>
+                    </div>
             </div>
         </div>
         </div>

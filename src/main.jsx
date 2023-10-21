@@ -78,7 +78,7 @@ const router = createBrowserRouter([
       {
         path:"/updateBrand/:brand",
         element:<UpdateBrand></UpdateBrand>,
-        loader:({params})=>fetch(`http://localhost:5000/product/${params.brand}`)
+        loader:({params})=>fetch(`https://brand-shop-server-nkk757sco-forhadahmed367423s-projects.vercel.app/product/${params.brand}`)
       }
     ]
       

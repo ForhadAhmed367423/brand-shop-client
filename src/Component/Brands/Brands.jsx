@@ -4,7 +4,7 @@ import { Link} from "react-router-dom";
 const Brands = () => {
     return (
         <div className="w-11/12 mx-auto">
-        <div  className="flex justify-between items-center w-full rounded-lg bg-white my-12 p-5 shadow-sm">
+        <div  className="lg:flex justify-between items-center w-full rounded-lg bg-white my-12 p-5 shadow-sm">
     
             <Link to={'/samsung'}>
                 <img src="https://i.ibb.co/pdfGkgx/download.png" alt="" />
